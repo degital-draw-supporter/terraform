@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+  asmcli:
+    build: .
+    volumes:
+      - ./output:/output
+      - ./creds:/creds
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: "/creds/account.json"
+      PROJECT_ID: $TF_VAR_project_name
+      CLUSTER_NAME: $TF_VAR_cluster_name
+      CLUSTER_LOCATION: $TF_VAR_location

@@ -1,0 +1,10 @@
+*.tfstate*
+*.tfstate.backup
+*.tfplan_lock
+.terraform
+terraform.tfstate.d
+__*_ln.tf
+creds
+output
+.envrc
+.DS_Store
